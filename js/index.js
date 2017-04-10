@@ -1,14 +1,14 @@
 
 /*MENU FUNCTION*/
 jQuery(document).ready(function(){
-	if (jQuery(window).width() < 1165) {
+	if (jQuery(window).width() < 650) {
 		jQuery("#small-menu").on('click', function() {
 			event.preventDefault();
 			jQuery("#small-menu").toggleClass("active");
-			jQuery("#nav-list ul").toggleClass("active");
+			jQuery("#nav-bar ul").toggleClass("active");
 		});
-		jQuery('.nav-link').on('click' ,function(){
-			jQuery("#nav-list ul").addClass("active");
+		jQuery('#nav-bar ul li a').on('click' ,function(){
+			jQuery("#nav-bar ul").addClass("active");
 			console.log("Test");
 		});
 	}
@@ -16,24 +16,22 @@ jQuery(document).ready(function(){
 		jQuery("#nav-list ul").removeClass("active");
 	}
 	jQuery(window).resize(function() {
-		if (jQuery(window).width() < 1165) {
-			jQuery("#nav-list ul").addClass("active");
+		if (jQuery(window).width() < 650) {
+			jQuery("#nav-bar ul").addClass("active");
 			console.log("size: " + jQuery(window).width());
 			
 			//When pressed on the menu icon -> open the menu, or close
 			jQuery("#small-menu").on('click', function() {
-				jQuery("#nav-list ul").toggleClass("active");
-				console.log("Open & toe");
+				jQuery("#nav-bar ul").toggleClass("active");
 			});
 			
 			//When you clicked an element from the menu, it should close
-			jQuery('.nav-link').on('click' ,function(){
-				jQuery("#nav-list ul").addClass("active");
-				console.log("Test");
+			jQuery('#nav-bar ul li a').on('click' ,function(){
+				jQuery("#nav-bar ul").addClass("active");
 			});
 		}
 		else {
-			jQuery("#nav-list ul").removeClass("active");
+			jQuery("#nav-bar ul").removeClass("active");
 		}
 	});	
 });

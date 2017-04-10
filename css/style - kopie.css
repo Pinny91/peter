@@ -196,7 +196,13 @@ a:visited {
 }
 
 
+.oneven-blok {
+	background-color: rgba(211, 211, 211, 1);
+}
 
+.even-blok {
+	background-color: rgba(83, 179, 178, 1)
+}
 
 #header-sectie {
 	padding-top: 50px;	
@@ -264,7 +270,21 @@ a:visited {
 /*GROOTSCHERM*/
 @media screen and (min-width: 1165px) {
 /* Menu hiden als het scherm groot genoeg is. */
+#small-menu {
+  display: none;
+}
+#nav-list {
+    margin: 0;
+    padding: 0;
+	padding-left: 50px;
+    overflow: hidden;
+	position: fixed;
+	width: 100%;
+}
 
+#nav-list ul {
+	margin: 0;
+}
 #social-bar, #social-bar li {
 	height: 50px;
 }
