@@ -84,22 +84,6 @@ $(".btn").mouseup(function(){
 		});
 
 		
-/*easy to change text*/
-$(document).ready( function() {
-	$("#pr-tab1").load("car1.txt", function(responseTxt, statusTxt, xhr){
-        if(statusTxt == "success")
-            alert("External content loaded successfully!");
-        if(statusTxt == "error")
-            alert("Error: " + xhr.status + ": " + xhr.statusText);
-    });
-});
-		
-		
-		
-		
-		
-		
-		
 function miniGlasChange(){
 	var image = document.getElementById("glas");
 	var dropd = document.getElementById("glasList");
