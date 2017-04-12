@@ -65,8 +65,41 @@ jQuery(document).ready(function(){
 $(".btn").mouseup(function(){
     $(this).blur();
 })
+	/*foto-function*/
+		$(document).ready(function() {
+			$('.foto-list > li > a').click(function(){
+				event.preventDefault();//stop browser to take action for clicked anchor
+				var active_tab_selector = $('.foto-list > li.active-img > a').attr('href');	
+				var actived_nav = $('.foto-list > li.active-img');				
+				actived_nav.removeClass('active-img');
+				$(this).parents('li').addClass('active-img');
+				
+				$(active_tab_selector).removeClass('active-img-big');
+				$(active_tab_selector).addClass('non-active-img');
+				
+				var target_tab_selector = $(this).attr('href');
+				$(target_tab_selector).removeClass('non-active-img');
+				$(target_tab_selector).addClass('active-img-big');
+			});
+		});
 
-
+		
+/*easy to change text*/
+$(document).ready( function() {
+	$("#pr-tab1").load("car1.txt", function(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+            alert("External content loaded successfully!");
+        if(statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+    });
+});
+		
+		
+		
+		
+		
+		
+		
 function miniGlasChange(){
 	var image = document.getElementById("glas");
 	var dropd = document.getElementById("glasList");

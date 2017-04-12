@@ -329,7 +329,28 @@ a:visited {
 	}
 }
 
+/*foto list*/
+
+.foto-list li {
+	display: inline-block;
+	padding-right: 2px;
+	padding-left: 2px;
+	width: 21%;
+}
+
+	
+.active-img {
+	
+}
+
+.non-active-img {
+	display: none;
+}
+
 /*Einde car sectie*/
+
+
+
 
 /*Opmaak miniconfig */
 .image-box {
