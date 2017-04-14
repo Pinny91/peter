@@ -11,7 +11,7 @@ body{
 	
 	/*Andere basis voorwaarden*/
 	z-index: 1;
-	background-color: white;
+	background-color: rgba(211, 211, 211, 1);
 	width: 100%;
 }
 
@@ -56,6 +56,21 @@ a:visited {
 
 .even-blok {
 	background-color: rgba(83, 179, 178, 1);
+	padding-top: 0;
+	background: url("backgroundSitePeter.png") no-repeat left center fixed; 
+	background-size:  cover;
+}
+
+.text-bubble{
+	background-color: rgba(83, 179, 178, 0.9);
+	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
+	border-radius: 15px;
+	padding: 3px;
+	margin: 1px;
+	
+	max-width: 900px;
+	margin-left: 1.5em;
+	margin-right: auto;
 }
 
 
@@ -363,6 +378,7 @@ a:visited {
 	position: absolute;
 	top: 0;
 	left: 0;
+	max-width: 80%;
 }
 
 #Original{
