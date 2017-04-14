@@ -1,43 +1,66 @@
 
 /*MENU FUNCTION*/
-jQuery(document).ready(function(){
-	if (jQuery(window).width() < 650) {
-		jQuery("#small-menu").on('click', function() {
+$(document).ready(function(){
+	if ($(window).width() < 650) {
+		$("#small-menu").on('click', function() {
 			event.preventDefault();
-			jQuery("#small-menu").toggleClass("active");
-			jQuery("#nav-bar ul").toggleClass("active");
+			$("#small-menu").toggleClass("active");
+			$("#nav-bar ul").toggleClass("active");
 		});
-		jQuery('#nav-bar ul li a').on('click' ,function(){
-			jQuery("#nav-bar ul").addClass("active");
-			console.log("Test");
+		$('#nav-bar ul li a').on('click' ,function(){
+			$("#nav-bar ul").addClass("active");
 		});
 	}
 	else {
-		jQuery("#nav-list ul").removeClass("active");
+		$("#nav-list ul").removeClass("active");
 	}
-	jQuery(window).resize(function() {
-		if (jQuery(window).width() < 650) {
-			jQuery("#nav-bar ul").addClass("active");
-			console.log("size: " + jQuery(window).width());
-			
+	$(window).resize(function() {
+		if ($(window).width() < 650) {
+			$("#nav-bar ul").addClass("active");
+			console.log("size: " + $(window).width());
 			//When pressed on the menu icon -> open the menu, or close
-			jQuery("#small-menu").on('click', function() {
-				jQuery("#nav-bar ul").toggleClass("active");
+			$("#small-menu").on('click', function() {
+				$("#nav-bar ul").toggleClass("active");
 			});
-			
 			//When you clicked an element from the menu, it should close
-			jQuery('#nav-bar ul li a').on('click' ,function(){
-				jQuery("#nav-bar ul").addClass("active");
+			$('#nav-bar ul li a').on('click' ,function(){
+				$("#nav-bar ul").addClass("active");
 			});
 		}
 		else {
-			jQuery("#nav-bar ul").removeClass("active");
+			$("#nav-bar ul").removeClass("active");
 		}
 	});	
 });
 
-	/*PROJECTS FUNCTION*/
-	$(document).ready(function() {
+$(document).ready(FotoSelect());
+$(document).ready(AutoSelect());
+
+	/*Auto FUNCTION*/
+
+
+$(".btn").mouseup(function(){
+    $(this).blur();
+})
+
+	/*foto-function*/
+function FotoSelect() {
+	$('.foto-list > li > a').click(function(){
+		event.preventDefault();//stop browser to take action for clicked anchor
+		var active_tab_selector = $('.foto-list > li.active-img > a').attr('href');	
+		var actived_nav = $('.foto-list > li.active-img');				
+		actived_nav.removeClass('active-img');
+		$(this).parents('li').addClass('active-img');
+		
+		$(active_tab_selector).removeClass('active-img-big');
+		$(active_tab_selector).addClass('non-active-img');
+			
+		var target_tab_selector = $(this).attr('href');
+		$(target_tab_selector).removeClass('non-active-img');
+		$(target_tab_selector).addClass('active-img-big');
+	});
+};
+function AutoSelect() {
 			$('.project-list > li > a').click(function(){
 			event.preventDefault();//stop browser to take action for clicked anchor
 						
@@ -60,60 +83,33 @@ jQuery(document).ready(function(){
 			$(target_tab_selector).removeClass('pr-hide');
 			$(target_tab_selector).addClass('pr-active');
 			 });
-	});
-
-$(".btn").mouseup(function(){
-    $(this).blur();
-})
-	/*foto-function*/
-		$(document).ready(function() {
-			$('.foto-list > li > a').click(function(){
-				event.preventDefault();//stop browser to take action for clicked anchor
-				var active_tab_selector = $('.foto-list > li.active-img > a').attr('href');	
-				var actived_nav = $('.foto-list > li.active-img');				
-				actived_nav.removeClass('active-img');
-				$(this).parents('li').addClass('active-img');
-				
-				$(active_tab_selector).removeClass('active-img-big');
-				$(active_tab_selector).addClass('non-active-img');
-				
-				var target_tab_selector = $(this).attr('href');
-				$(target_tab_selector).removeClass('non-active-img');
-				$(target_tab_selector).addClass('active-img-big');
-			});
-		});
-
+	};
 		
 function miniGlasChange(){
 	var image = document.getElementById("glas");
 	var dropd = document.getElementById("glasList");
 	image.src = dropd.value;	
 };
-
 function miniBumperChange(){
 	var image = document.getElementById("bumper");
 	var dropd = document.getElementById("bumperList");
 	image.src = dropd.value;	
 };
-
 function miniPinkerChange(){
 	var image = document.getElementById("pinker");
 	var dropd = document.getElementById("pinkerList");
 	image.src = dropd.value;	
 };
-
 function miniSpiegelChange(){
 	var image = document.getElementById("spiegels");
 	var dropd = document.getElementById("spiegelsList");
 	image.src = dropd.value;	
 };
-
 function miniTankDopChange(){
 	var image = document.getElementById("tankDop");
 	var dropd = document.getElementById("tankDopList");
 	image.src = dropd.value;	
 };
-
 function miniSpoilerChange(){
 	var image = document.getElementById("spoiler");
 	var dropd = document.getElementById("spoilerList");
