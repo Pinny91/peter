@@ -41,6 +41,10 @@ a:visited {
 	color: white; 
 }
 
+#header-sectie img{
+	max-height: 150px;
+	max-width: 200px;
+}
 .blok {
   padding: 1px;
   margin: 0;
@@ -48,19 +52,17 @@ a:visited {
   min-height: 250px;
   height: auto;
   padding-left: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 2.5em;
 }
 
 .oneven-blok {
 	background-color: rgba(211, 211, 211, 1);
-	padding: 0;
 	background: url("BackGroundPeterGrey.png") no-repeat left center fixed; 
 	background-size:  cover;
 }
 
 .even-blok {
 	background-color: rgba(83, 179, 178, 1);
-	padding: 0;
 	background: url("BackGroundPeterBlue.png") no-repeat left center fixed; 
 	background-size:  cover;
 }
@@ -70,12 +72,35 @@ a:visited {
 	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15);
 	border-radius: 15px;
 	padding: 3px;
+	padding-left: 10px;
 	margin: 3px;
 	margin-top: 0;
+	margin-right: 20px;
 	
 	max-width: 900px;
 	margin-left: 1.5em;
-	margin-right: auto;
+}
+
+.even-blok .text-bubble {
+	background-color: rgba(83, 179, 178, 0.7);
+}
+
+.even-blok .text-bubble {
+	background-color: rgba(211, 211, 211, 0.7);
+}
+
+.centeringStuff {
+	position: relative;
+	display: block;
+		margin-left: auto;
+		margin-right: auto;
+}
+.text-bubbleMargin {
+	margin: 3px;
+	margin-top: 0;
+	margin-right: 20px;
+	margin-left: 1.5em;
+
 }
 
 .even-blok .title {
@@ -89,6 +114,72 @@ a:visited {
 	padding: auto;
 	margin: 0;
 	margin-bottom: 5px;
+}
+
+.row {
+	padding-bottom: 15px;
+}
+/*CarSpecs opmaak */
+
+.carSpec {font-size: 1.5em;}
+.carSpec h2 {font-size: 2.5em;}
+.carSpec h3 {font-size: 2.2em;}
+.carSpec p {
+	text-align: left;
+}
+.carSpec .note {font-size: 0.7em;}
+.carSpecList {
+	text-align: left;
+	padding-left: 15px;
+	margin-left: 15px;
+}
+
+
+
+
+
+/*TEKST ADJUST CODE Mini verkoop*/
+@media all and (min-width: 50px)   {  
+	.carSpec .note {font-size: 0.5em;}
+	.carSpec {font-size: 1.0em;}
+	.carSpec h2 {font-size: 1.8em;}
+	.carSpec h3 {font-size: 1.6em;}
+}
+@media all and (min-width: 100px)   {  
+	.carSpec .note {font-size: 0.5em;}
+	.carSpec {font-size: 1.0em;}
+	.carSpec h2 {font-size: 1.8em;}
+	.carSpec h3 {font-size: 1.6em;}
+}
+@media all and (min-width: 200px)   {  
+	.carSpec .note {font-size: 0.7em;}
+	.carSpec {font-size: 1.2em;}
+	.carSpec h2 {font-size: 1.8em;}
+	.carSpec h3 {font-size: 1.6em;}
+}
+@media all and (min-width: 600px)  {  
+	.carSpec .note {font-size: 0.7em;}
+	.carSpec {font-size: 1.2em;}
+	.carSpec h2 {font-size: 2.0em;}
+	.carSpec h3 {font-size: 1.8em;}
+}
+@media all and (min-width: 700px)  {  
+	.carSpec .note {font-size: 0.7em;}
+	.carSpec {font-size: 1.2em;}
+	.carSpec h2 {font-size: 2.0em;}
+	.carSpec h3 {font-size: 1.8em;}
+}
+@media all and (min-width: 800px)  {  
+	.carSpec .note {font-size: 0.7em;}
+	.carSpec {font-size: 1.2em;}
+	.carSpec h2 {font-size: 2.0em;}
+	.carSpec h3 {font-size: 1.8em;}
+}
+@media all and (min-width: 900px)  {  
+	.carSpec .note {font-size: 0.7em;}
+	.carSpec {font-size: 1.2em;}
+	.carSpec h2 {font-size: 2.0em;}
+	.carSpec h3 {font-size: 1.8em;}
 }
 
 /*Header & navigationBar */
@@ -135,10 +226,20 @@ a:visited {
 	right: 10px;
 }
 
+.logobar {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 25px;
+	height: 25px;
+}
 
 /*GROOTSCHERM*/
 @media screen and (min-width: 650px) {
 /* Menu hiden als het scherm groot genoeg is. */
+	#header-sectie {
+		padding-top: 50px;
+	}
 	#small-menu {
 		display: none;
 	}
@@ -176,8 +277,14 @@ a:visited {
   #nav-bar ul.active {
     display: none;
   }
+ .logobar {
+	top: 5px;
+	left: 35px;
+	width: 25px;
+	height: 25px;
+}
   #nav-bar h2 {
-	  padding-left: 35px;
+	  padding-left: 70px;
   }
   #small-menu, #mailIcon {
 		cursor: pointer;
@@ -323,11 +430,21 @@ a:visited {
 /*Cars sections */
 .project-list > li a img {
 	min-height: 50px;
-	min-width: 90px;
+	/*min-width: 90px;*/
 }
 .project-list > li a {
 	min-height: 54px;
-	min-width: 100px;
+	min-width: 80px;
+}
+
+.thumbnail {
+	padding: 0;
+}
+
+.thumbnail img {
+	margin: 0;
+	width: auto;
+	height: auto;
 }
 
 .pr-tab.pr-hide {
@@ -359,6 +476,7 @@ a:visited {
 	}
 	.leftside-adjust {
 		left:77px;
+		padding: auto;
 	}
 }
 
@@ -382,20 +500,26 @@ a:visited {
 
 /*Einde car sectie*/
 
-
-
-
 /*Opmaak miniconfig */
 .image-box {
-	position :relative;
-	height: auto;
-	min-height: 26.5em;
+	position: relative;
+	min-width: 90%;
+
 }
 .image-box img {
 	position: absolute;
 	top: 0;
 	left: 0;
 	max-width: 90%;
+	min-height: 230px;
+	min-width: 410px;
+}
+#frontAndBack {
+	margin-top: 15px;
+	min-height: 420px;
+}
+#side {
+	min-height: 415px;
 }
 
 #Original{
@@ -403,8 +527,12 @@ a:visited {
 }
 .miniGlas {
 	z-index: 3;
+
 }
 
+#sideView {
+	min-height: 400px;
+}
 
 #selectList {
 	text-align: left;
@@ -412,6 +540,44 @@ a:visited {
 #selectList li {
 	margin-bottom: 5px;
 }
+
+
+@media all and (max-width: 767px)  {
+	#side {
+		min-height: 750px;
+	}	
+	#sideView {
+		min-height: 350px;
+	}
+	#frontAndBack {
+		min-height: 700px;
+	}
+}
+
+@media all and (max-width: 600px)  {
+	#side {
+		min-height: 750px;
+	}	
+	#sideView {
+		min-height: 300px;
+	}
+	#frontAndBack {
+		min-height: 700px;
+	}
+}
+@media all and (max-width: 540px)  {
+	#side {
+		min-height: 750px;
+	}	
+	#sideView {
+		min-height: 250px;
+	}
+	#frontAndBack {
+		min-height: 700px;
+	}
+}
+
+
 
 /*einde mini config*/
 
@@ -435,23 +601,23 @@ a:visited {
 	body  { font-size:1.3em;  }
 	.title { font-size:2em; }
 	#header-title { font-size:2.5em;}	
-	.image-box { min-height: 27em; }
+	/*.image-box { min-height: 27em; }*/
 }
 @media all and (min-width: 450px)  {  
 	body  { font-size:1.3em;  }
 	.title { font-size:2em; }
 	#header-title { font-size:2.5em;}	
-	.image-box { min-height: 33em; }
+	/*.image-box { min-height: 33em; }*/
 }
 @media all and (min-width: 600px)  {  
 	.title { font-size:2.5em; }
 	#header-title { font-size:3em; }
 	body  { font-size:1.3em;  } 
-	.image-box { min-height: 38em; }
+	/*.image-box { min-height: 38em; }*/
 }
 @media all and (min-width: 700px)  {  
 	.title { font-size:2.5em; }
 	#header-title { font-size:3em; }
 	body  { font-size:1.3em;  } 
-	.image-box { min-height: 43em; }
+	/*.image-box { min-height: 43em; }*/
 }
