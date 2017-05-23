@@ -408,7 +408,7 @@ var partList = document.getElementById("partList");
 
 // mailing
 
-var $contactForm = $('#contact-form');
+/*var $contactForm = $('#contact-form');
 $contactForm.submit(function(e) {
 	e.preventDefault();
 	$.ajax({
@@ -431,7 +431,7 @@ $contactForm.submit(function(e) {
 		}
 	});
 });
-
+*/
 
 
 

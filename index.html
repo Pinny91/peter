@@ -303,17 +303,12 @@ AutoAP garantiza una conducción sin preocupaciones y queremos que disfrute cada
 		<section class="blok oneven-blok" id="contact-sectie">
 			<h1 class="title">Contact</h1>
 			<div class="row">
-				<form id="contact-form" action="//formspree.io/pinnewaert@gmail.com" method="post">
-					<input type="text" name="Name" placeholder="Name" required>
-					<input type="email" name="Email" placeholder="Email" required>
-					<textarea name="Message" cols="30" rows="6" placeholder="Message" required></textarea>
-					<!-- CONFIG -->
-					<input class="is-hidden" type="text" name="_gotcha">
-					<input type="hidden" name="_subject" value="Subject">
-					<input type="hidden" name="_cc" value="email@cc.com">
-					<!-- /CONFIG -->
-					<input class="submit" type="submit" value="Send">
-				</form>
+<form action="https://formspree.io/pinnewaert@gmail.com"
+      method="POST">
+    <input type="text" name="name">
+    <input type="email" name="_replyto">
+    <input type="submit" value="Send">
+</form>
 			</div>
 		</section>
 		
