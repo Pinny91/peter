@@ -447,6 +447,25 @@ a:visited {
 	height: auto;
 }
 
+.project-list li .text-bubble {
+	margin: 0;
+	font-size: 0.7em;
+	padding: 0;
+	padding-top: 2px;
+	border-radius: 0;
+	color: #337AB7;
+}
+.project-list li .text-bubble p {
+	margin: 0;
+}
+.project-list li {
+		margin-bottom: 5px;
+}
+
+.project-list li .thumbnail {
+	margin: 0;
+}
+
 .pr-tab.pr-hide {
 	display: none;
 }

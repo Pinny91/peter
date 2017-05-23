@@ -39,24 +39,28 @@
 						<li class="pr-active">
 							<a class="no-background thumbnail" href="#pr-tab1">
 								<img class="" src="pics/Mini1_Foto1.jpg" alt="MiniCooper" width="80" height="50" >
+								<div class="text-bubble"><p> Mini One D <br> 08/2014 <br> 14.000€</p></div>
 							</a>
 						</li>
 						<li class="">
 							<a class="no-background thumbnail" href="#pr-tab2">
 								<img class="" src="pics/mini.png" alt="MiniCooper" width="80" height="50">
+								<div class="text-bubble"><p> Mini One D <br> 08/2014 <br> 14.000€</p></div>								
 							</a>
 						</li>
 						<li class="">
 							<a class="no-background thumbnail" href="#pr-tab3">
 								<img class="" src="pics/mini.png" alt="MiniCooper" width="80" height="50">
+								<div class="text-bubble"><p> Mini One D <br> 08/2014 <br> 14.000€</p></div>
 							</a>
 						</li>
 						<li class="">
 							<a class="no-background thumbnail" href="#pr-tab4">
 								<img class="" src="pics/mini.png" alt="MiniCooper" width="80" height="50">
+								<div class="text-bubble"><p> Mini One D <br> 08/2014 <br> 14.000€</p></div>
 							</a>
 						</li>
-						<li class="">
+		<!--				<li class="">
 							<a class="no-background thumbnail" href="#pr-tab5">
 								<img class="" src="pics/mini.png" alt="MiniCooper">
 							</a>
@@ -66,6 +70,7 @@
 								<img class="" src="pics/mini.png" alt="MiniCooper">
 							</a>
 						</li>
+		-->
 					</ul>
 				</div>
 				<div class="leftside-adjust col-xs-8 col-sm-8 col-md-12">
@@ -126,12 +131,13 @@
 						<div class="pr-tab pr-hide" id="pr-tab4"> 
 
 						</div>
-						<div class="pr-tab pr-hide" id="pr-tab5"> 
+		<!--				<div class="pr-tab pr-hide" id="pr-tab5"> 
 
 						</div>
 						<div class="pr-tab pr-hide" id="pr-tab6"> 
 								
 						</div>
+		-->				
 					</div>
 				</div>
 			</div>
@@ -248,7 +254,7 @@
 
 			</div>			
 			<div id="frontAndBack" class="row">
-				<div class="col-md-4 col-sm-4 col-xs-8 text-bubble">
+				<div id="partList"class="col-md-4 col-sm-4 col-xs-8 text-bubble">
 				
 				</div>
 
@@ -297,7 +303,17 @@ AutoAP garantiza una conducción sin preocupaciones y queremos que disfrute cada
 		<section class="blok oneven-blok" id="contact-sectie">
 			<h1 class="title">Contact</h1>
 			<div class="row">
-			
+				<form id="contact-form" action="//formspree.io/pinnewaert@gmail.com" method="post">
+					<input type="text" name="Name" placeholder="Name" required>
+					<input type="email" name="Email" placeholder="Email" required>
+					<textarea name="Message" cols="30" rows="6" placeholder="Message" required></textarea>
+					<!-- CONFIG -->
+					<input class="is-hidden" type="text" name="_gotcha">
+					<input type="hidden" name="_subject" value="Subject">
+					<input type="hidden" name="_cc" value="email@cc.com">
+					<!-- /CONFIG -->
+					<input class="submit" type="submit" value="Send">
+				</form>
 			</div>
 		</section>
 		
@@ -305,7 +321,11 @@ AutoAP garantiza una conducción sin preocupaciones y queremos que disfrute cada
 		
 		
 		
-    	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>	
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+		<script src="js/index.js"></script> 
 		<script src="js/index.js"></script> 
 	
 	</body>
